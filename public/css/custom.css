@@ -1,8 +1,66 @@
-/* 
+::-webkit-scrollbar {
+    width: 5px;
+}
 
-1. Add your custom Css styles below
-2. Place the this code in your template: 
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    border: 0px;
+}
 
- <link href="css/custom.css" rel="stylesheet">
+::-webkit-scrollbar-thumb {
+    background: #ff0011;
+}
 
-*/
+#logo img {
+    width: 180px;
+}
+
+.content {
+    margin-bottom: 0 !important;
+}
+
+.header-extras>ul>li a,
+.header-extras>ul>li i {
+    color: #fff !important;
+}
+
+.header-extras>ul>li a:hover,
+.header-extras>ul>li i:hover {
+    color: #ff0011 !important;
+}
+
+.cfhstyle {
+    padding: 0px 20px;
+    background-color: #ff0011;
+    color: #fff;
+    font-weight: 800;
+}
+
+.donasiyet {
+    font-weight: 700;
+    color: #121212;
+    font-size: 1.5rem;
+}
+
+.targetdonasi {
+    font-weight: 700;
+    color: green;
+    font-size: 1.25rem;
+}
+
+.leftfooter {
+    font-weight: 700;
+}
+
+.rightfooter {
+    font-weight: 700 !important;
+}
+
+#page-title {
+    background-image: url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588128921/cos/media/bg-min_zsjmfw.jpg');
+}
+
+#page-title h1 {
+    font-weight: 900 !important;
+    color: white;
+}
