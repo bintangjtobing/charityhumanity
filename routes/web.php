@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', 'IndexController@index');
 Route::get('/rekening-donasi', function () {
     return view('home.rekening');
 });
@@ -22,6 +20,9 @@ Route::get('/faq', function () {
 });
 Route::get('/kontak-kami', function () {
     return view('home.kontak');
+});
+Route::get('/tentang-kami', function () {
+    return view('home.tentang');
 });
 Route::get('/donasi', 'donationController@index');
 Route::get('/konfirmasi-pembayaran', 'donationController@konfirmasipembayaran');

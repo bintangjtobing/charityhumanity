@@ -41,7 +41,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="/tentang-kami">Tentang Kami</a></li>
+                                    {{-- <li><a href="/tentang-kami">Tentang Kami</a></li> --}}
                                     <li><a href="/faq">F.A.Q</a>
                                         {{-- <li><a href="/menjadi-relawan">Menjadi
                                             Relawan</a></li> --}}

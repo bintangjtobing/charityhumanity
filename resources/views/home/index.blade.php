@@ -55,12 +55,18 @@
             </div>
             <div class="col-lg-6">
                 <h2>DONASI TERHIMPUN</h2>
-                <p><span class="donasiyet">Rp.1.000.000</span> terkumpul dari <span
-                        class="targetdonasi">Rp.10.000.000</span></p>
+                <?php
+                    $target = 10000000;
+                    $jumlahuang = $countdonations;
+                    $algo = $jumlahuang / $target;
+                    $result = $algo * 100;
+                ?>
+                <p><span class="donasiyet">Rp. @convert($countdonations)</span> terkumpul dari <span
+                        class="targetdonasi">Rp. @convert('10000000')</span></p>
                 <div class="p-progress-bar-container radius">
                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1000000"
-                        aria-valuemin="0" aria-valuemax="100" style="width:10%">
-                        Rp.1.000.000 Terkumpul
+                        aria-valuemin="0" aria-valuemax="100" style="width:{{$result}}%">
+                        Rp. @convert($countdonations) Terkumpul
                     </div>
                 </div>
                 <div class="text-center m-t-40">
@@ -81,28 +87,28 @@
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="text-center">
                     <div class="counter"> <span data-speed="4500" data-refresh-interval="23" data-to="365"
                             data-from="100" data-seperator="true"></span> </div>
                     <div class="seperator seperator-small"></div>
-                    <p>Penerima Manfaat</p>
+                    <h3><b>Penerima Manfaat</b></h3>
                 </div>
             </div>
-            <div class="col-lg-4">
+            {{-- <div class="col-lg-4">
                 <div class="text-center">
                     <div class="counter"> <span data-speed="3000" data-refresh-interval="12" data-to="114"
                             data-from="50" data-seperator="true"></span> </div>
                     <div class="seperator seperator-small"></div>
                     <p>Relawan</p>
                 </div>
-            </div>
-            <div class="col-lg-4">
+            </div> --}}
+            <div class="col-lg-6">
                 <div class="text-center">
-                    <div class="counter"> <span data-speed="4550" data-refresh-interval="50" data-to="14825"
-                            data-from="48" data-seperator="true"></span> </div>
+                    <div class="counter"> <span data-speed="4550" data-refresh-interval="50"
+                            data-to="{{$donations->count()}}" data-from="0" data-seperator="true"></span> </div>
                     <div class="seperator seperator-small"></div>
-                    <p>Donatur</p>
+                    <h3><b>Donatur</b></h3>
                 </div>
             </div>
         </div>
@@ -110,18 +116,12 @@
 </section>
 <!-- end: COUNTERS -->
 
-<!-- BLOG -->
+{{-- <!-- BLOG -->
 <section class="content background-grey">
     <div class="container">
         <div class="heading-text heading-section">
-            <h2><span class="cfhstyle">CFH.</span> News</h2>
-            <span class="lead">The most happiest time of the day!. Morbi sagittis, sem quis
-                lacinia faucibus,
-                orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius
-                consequat magna, id
-                molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi
-                diam, non ornare
-                orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+            <h2>Berita <span class="cfhstyle">CFH.</span></h2>
+            <span class="lead">Disini kami akan selalu update tentang apa yang kami berikan dan apa yang kami lakukan.
             </span>
         </div>
     </div>
@@ -223,6 +223,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- end: BLOG -->
 @endsection

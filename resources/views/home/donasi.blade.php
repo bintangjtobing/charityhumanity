@@ -17,7 +17,13 @@
 </div>
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row donasisection">
+            <div class="col-lg-5">
+                <h2>#Berdonasi</h2>
+                <p>Dengan nilai berapapun yang kamu donasikan, kamu sudah membantu 1 jiwa dengan makanan dan vitamin
+                    gratis. Kami berharap, aksi ini dapat menjadi sumber kebahagiaan bagi para mereka yang membutuhkan
+                    bantuan ini.</p>
+            </div>
             <div class="col-lg-7">
                 <form action="/request-payment" method="POST">
                     {{ csrf_field() }}
