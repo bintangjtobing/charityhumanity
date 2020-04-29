@@ -64,3 +64,34 @@
     font-weight: 900 !important;
     color: white;
 }
+
+.paymentdone {
+    background-image: url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588148063/cos/media/485_Converted_sest00.svg');
+    background-size: cover;
+}
+
+.confirmationdone {
+    /* background-image: url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588148063/cos/media/485_Converted_sest00.svg'); */
+    background-size: cover;
+}
+
+.info-payment p {
+    color: #121212;
+}
+
+.info-payment h3 {
+    font-weight: 700;
+}
+
+.info-payment {
+    padding: 2rem;
+    border-radius: 30px;
+    border: 1px solid #e6e8eb;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+}
+
+.requiredstar {
+    color: red !important;
+    font-size: 5px;
+}

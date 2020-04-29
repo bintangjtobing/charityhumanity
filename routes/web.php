@@ -26,6 +26,12 @@ Route::get('/kontak-kami', function () {
 Route::get('/donasi', 'donationController@index');
 Route::get('/konfirmasi-pembayaran', 'donationController@konfirmasipembayaran');
 
+Route::post('/request-payment', 'donationController@payment');
+Route::post('/confirmation-payment', 'donationController@confirmation');
+// Route::get('/view', function () {
+//     return view('home.paymentdone');
+// });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
