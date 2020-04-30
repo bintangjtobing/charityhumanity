@@ -11,8 +11,11 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $donations = donationDB::all();
+        $donations = DB::table('donations')
+            ->where('donations.status', '=', 'paid')
+            ->get();
         $countdonations = DB::table('donations')
+            ->where('donations.status', '=', 'paid')
             ->sum('donations.jumlah_donasi');
         return view('home.index', ['donations' => $donations, 'countdonations' => $countdonations]);
     }

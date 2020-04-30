@@ -116,6 +116,52 @@
 </section>
 <!-- end: COUNTERS -->
 
+{{-- THANK YOU --}}
+<section>
+    <div class="container">
+        <div class="text-center">
+            <h2>Terima kasih</h2>
+            <span class="lead">Terima kasih kepada kamu yang bersedia memberikan bantuannya kepada mereka.</span>
+            <hr class="space">
+        </div>
+        <div class="thankyouimg">
+            @foreach ($donations as $user)
+            <button data-toggle="modal" data-target="#profiledata{{$user->id}}"><img src="@if(!$user->pic &&
+            $user->gender=='L'){{url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588212505/cos/media/man_k6ctqv.png')}}
+            @elseif(!$user->pic && $user->gender ==
+            'P'){{url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588212505/cos/media/woman_rpqr6u.png')}}
+            @else
+            {!!asset('file/profilepic/'.$user->nama_donatur.'/'.$user->pic)!!} @endif"></button>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- MODAL PROFILE --}}
+@foreach ($donations as $user)
+<div class="modal fade" id="profiledata{{$user->id}}" tabindex="-1" role="dialog"
+    aria-labelledby="profiledata{{$user->id}}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profiledata{{$user->id}}">Terima kasih, {{$user->nama_donatur}}!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Jumlah donasi: {{$user->jumlah_donasi}}<br>
+                    <b>{{$user->note}}</b>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
+
 {{-- <!-- BLOG -->
 <section class="content background-grey">
     <div class="container">

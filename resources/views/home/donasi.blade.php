@@ -55,8 +55,21 @@
                         <h3>2. Isi Data Diri</h3>
                         <div class="form-row">
                             <div class="form-group col-lg-12">
+                                <label for="">Foto Kamu (Opsional)</label>
+                                <input type="file" name="pic" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-8">
                                 <label for="">Nama Lengkap</label>
                                 <input type="text" name="namalengkap" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="">Jenis Kelamin</label>
+                                <select name="gender" id="" class="form-control custom-select" required>
+                                    <option value="L">Pria</option>
+                                    <option value="P">Wanita</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-row">

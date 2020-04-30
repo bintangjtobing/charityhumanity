@@ -25,6 +25,7 @@ class donationController extends Controller
         $metode = $request->metode;
         $nilai = $request->currency;
         $pay->refnumber = $ref;
+        $pay->status = 'unpaid';
         $pay->jumlah_donasi = $nilai;
         $pay->metode = $metode;
         $pay->nama_donatur = $nama_don;
@@ -32,7 +33,12 @@ class donationController extends Controller
         $pay->telp = $request->nohp;
         $pay->instagram = $request->instagram;
         $pay->note = $request->notes;
+        $pay->gender = $request->gender;
         $pay->logIp = $request->getClientIp();
+        if ($request->hasFile('pic')) {
+            $request->file('pic')->move('file/profilepic/' . $request->nama_donatur, $request->file('pic')->getClientOriginalName());
+            $pay->pic = $request->file('pic')->getClientOriginalName();
+        }
         $pay->save();
         return view('home.paymentdone', ['ref' => $ref, 'nama_don' => $nama_don, 'nilai' => $nilai, 'metode' => $metode]);
     }
