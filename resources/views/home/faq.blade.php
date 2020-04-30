@@ -78,15 +78,38 @@
                             bank transfer BCA dan Mandiri. Silahkan cek dan klik link ini agar dapat memberikan donasi.
                             <a href="/donasi">Donasi sekarang</a></div>
                     </div>
-                </div>
-                <div class="m-t-40">
-                    <h3>Apakah kamu mempunyai pertanyaan lainnya?</h3>
-                    <p>Kamu boleh mengirimkan pertanyaan kamu mengenai gerakan ini ke email<br>
-                        <a href="mailto:ask-cfh@sarjanamalam.com">ask-cfh@sarjanamalam.com</a></p>
+                    <div class="ac-item">
+                        <h5 class="ac-title"><i class="fa fa-question-circle"></i>Saya sudah transfer donasi, tapi
+                            mengapa nama saya tidak terlihat di form yang sudah memberi? </h5>
+                        <div class="ac-content" style="display: none;">Terima kasih bagi kamu yang sudah transfer donasi
+                            kamu. Namun jika nama kamu tidak terdaftar, pastikan kamu sudah mendaftarkan diri kamu di
+                            link <a href="/donasi">donasi kita</a>. Dan pastikan kamu sudah konfirmasi pembayaran kamu
+                            di <a href="/konfirmasi-pembayaran">link konfirmasi ini.</a>
+                        </div>
+                    </div>
+                    <div class="m-t-40">
+                        <h3>Apakah kamu mempunyai pertanyaan lainnya?</h3>
+                        <p>Kamu boleh mengirimkan pertanyaan kamu mengenai gerakan ini ke email<br>
+                            <a href="mailto:ask-cfh@sarjanamalam.com">ask-cfh@sarjanamalam.com</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 </section>
+<div style="background-image:url(https://res.cloudinary.com/sarjanamalam/image/upload/v1588135536/cos/media/sec_mzw7e4.jpg)"
+    class="call-to-action p-t-100 p-b-100 background-image mb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <h3 class="text-light">
+                    Sudah saatnya kita <b>#pemudabergerak</b>, ayo dukung dan berilah kepada mereka yang membutuhkan.
+                </h3>
+            </div>
+            <div class="col-lg-2">
+                <a href="/donasi" class="btn btn-light btn-outline">#berdonasi</a>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

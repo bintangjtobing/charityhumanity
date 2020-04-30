@@ -25,7 +25,7 @@
                     bantuan ini.</p>
             </div>
             <div class="col-lg-7">
-                <form action="/request-payment" method="POST">
+                <form action="/request-payment" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <h3>1. Isi Form Donasi</h3>
                     <div class="form-row">
@@ -38,7 +38,7 @@
                                 {{-- <input type="text" name="currency" class="form-control" id="currency-field"
                                     pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency"
                                     placeholder="Rp.1,000,000.00" required> --}}
-                                <input type="text" name="currency" class="form-control" id="">
+                                <input type="text" name="currency" class="form-control" id="" required>
                             </div>
                             <small>Tidak ada minimum jumlah donasi.</small>
                         </div>
@@ -62,7 +62,7 @@
                         <div class="form-row">
                             <div class="form-group col-lg-8">
                                 <label for="">Nama Lengkap</label>
-                                <input type="text" name="namalengkap" class="form-control">
+                                <input type="text" name="namalengkap" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label for="">Jenis Kelamin</label>
@@ -85,7 +85,12 @@
                             </div>
                             <div class="form-group col-lg-4">
                                 <label for="Instagram (Opsional)">Instagram (Opsional)</label>
-                                <input type="text" name="instagram" class="form-control" placeholder="@exampleexample">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" name="instagram" class="form-control" placeholder="username">
+                                </div>
                             </div>
                         </div>
                     </div>

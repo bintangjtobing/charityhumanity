@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68593210-12"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68593210-12');
+
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang Tobing" />
@@ -15,6 +29,10 @@
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
+
+    {{-- Meta graph Facebook --}}
+    <meta property="og:image"
+        content="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588233124/cos/media/thumb_rlenb2.jpg')!!}">
 </head>
 
 <body>
@@ -72,6 +90,12 @@
                                             <li><a href="/rekening-donasi">Rekening Donasi</a></li>
                                             {{-- <li><a href="/membership-register">Daftar menjadi relawan</a></li> --}}
                                             <li><a href="/kontak-kami">Kontak Kami</a></li>
+                                            <li><a href="https://instagram.com/charitiesforhumanity" target="_blank"><i
+                                                        class="fab fa-instagram fa-2x m-r-10 mt-2"></i></a><a
+                                                    href="https://facebook.com/charitiesforhumanity" target="_blank"><i
+                                                        class="fab fa-facebook-square fa-2x"></i></a>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>

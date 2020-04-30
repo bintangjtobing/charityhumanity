@@ -36,7 +36,7 @@ class donationController extends Controller
         $pay->gender = $request->gender;
         $pay->logIp = $request->getClientIp();
         if ($request->hasFile('pic')) {
-            $request->file('pic')->move('file/profilepic/' . $request->nama_donatur, $request->file('pic')->getClientOriginalName());
+            $request->file('pic')->move('file/profilepic/' . $request->namalengkap, $request->file('pic')->getClientOriginalName());
             $pay->pic = $request->file('pic')->getClientOriginalName();
         }
         $pay->save();

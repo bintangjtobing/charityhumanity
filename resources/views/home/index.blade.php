@@ -5,7 +5,7 @@
     data-animate-in="fadeIn" data-animate-out="fadeOut" data-items="1" data-loop="true" data-autoplay="true">
 
     <!-- Slide 1 -->
-    <div class="slide" data-bg-video="media/vid/example1.mp4">
+    <div class="slide" data-bg-video="media/vid/video_vol.mp4">
         <div class="container">
             <div class="slide-captions text-left text-light">
                 <div class="row">
@@ -70,7 +70,13 @@
                     </div>
                 </div>
                 <div class="text-center m-t-40">
-                    <h2><span style="color:#ff0011 !important;"><b>18</b></span> <b>hari lagi</b></h2>
+                    <?php
+                    $data_exp = '2020-05-17 00:00:00';
+                    $date = new DateTime($data_exp);
+                    $now = new DateTime();
+                    $interval = $date->diff($now)->format("%d");
+                    ?>
+                    <h2><span style="color:#ff0011 !important;"><b>{{$interval}}</b></span> <b>hari lagi</b> </h2>
                     <a href="/donasi" class="btn btn-primary btn-rounded btn-lg">DONASI SEKARANG</a>
                 </div>
             </div>
@@ -144,15 +150,34 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="profiledata{{$user->id}}">Terima kasih, {{$user->nama_donatur}}!</h5>
+                <h5 class="modal-title" id="profiledata{{$user->id}}">Terima kasih, <b>{{$user->nama_donatur}}</b>!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <p>Jumlah donasi: {{$user->jumlah_donasi}}<br>
-                    <b>{{$user->note}}</b>
-                </p>
+            <div class="modal-body descdonations">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 text-center">
+                            <div class="text-center">
+                                <img src="@if(!$user->pic &&
+            $user->gender=='L'){{url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588212505/cos/media/man_k6ctqv.png')}}
+            @elseif(!$user->pic && $user->gender ==
+            'P'){{url('https://res.cloudinary.com/sarjanamalam/image/upload/v1588212505/cos/media/woman_rpqr6u.png')}}
+            @else
+            {!!asset('file/profilepic/'.$user->nama_donatur.'/'.$user->pic)!!} @endif">
+                                <p>{{$user->nama_donatur}}</p>
+                                <a href="https://instagram.com/{{$user->instagram}}" target="_blank">@
+                                    {{$user->instagram}}</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <p>Jumlah donasi: Rp. @convert($user->jumlah_donasi)<br>
+                                <b>{{$user->note}}</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
