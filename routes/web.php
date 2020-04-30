@@ -31,6 +31,8 @@ Route::post('/request-payment', 'donationController@payment');
 Route::post('/confirmation-payment', 'donationController@confirmation');
 // Route::get('/view', function () {
 //     return view('home.paymentdone');
+
+Route::get('/credential', 'SysController@index');
 // });
 
 Auth::routes();
