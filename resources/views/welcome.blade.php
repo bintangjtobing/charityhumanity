@@ -120,6 +120,7 @@
                         <span class="leftfooter">
                             &copy; 2020 Charities For Humanity.
                         </span>
+                        From Sarjanamalam.
                     </div>
                 </div>
             </div>
