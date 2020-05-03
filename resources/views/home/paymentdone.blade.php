@@ -18,8 +18,8 @@
                     Bank: Mandiri
                     @elseif($metode=='BCA Transfer')
                     Transfer ke nomor rekening<br>
-                    Atas Nama: Bintang Cato Jeremia L Tobing<br>
-                    Nomor Rekening: 383-124-6616<br>
+                    Atas Nama: Renaldy Albertdin B Siregar<br>
+                    Nomor Rekening: 022-267-8950<br>
                     Bank: Bank Central Asia (BCA)
                     @else
                     Kamu transfer melalui pembayaran langsung, kamu bisa datang ke basecamp nya Charities Of Humanity
