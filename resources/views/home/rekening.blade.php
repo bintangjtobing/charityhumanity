@@ -25,8 +25,8 @@
                     <div class="ac-item">
                         <h5 class="ac-title">Bank BCA</h5>
                         <div class="ac-content">
-                            <p>Atas Nama: Bintang Cato Jeremia L Tobing<br>
-                                Nomor Rekening: 383-124-6616</p>
+                            <p>Atas Nama: Renaldy Albertdin B Siregar<br>
+                                Nomor Rekening: 022-267-8950</p>
                         </div>
                     </div>
                 </div>

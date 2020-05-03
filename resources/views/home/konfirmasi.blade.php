@@ -39,7 +39,8 @@
                     <div class="form-row">
                         <div class="form-group col-lg-12">
                             <label for="">Tanggal Transfer <span class="requiredstarr">*</span></label>
-                            <input type="text" class="form-control" name="date" required>
+                            <input type="text" class="form-control" name="datepick" required>
+
                         </div>
                     </div>
                     <div class="form-row">
@@ -71,8 +72,13 @@
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="">Rekening Tujuan</label>
-                            <input type="text" name="receivedbank" id="" class="form-control">
-                            <small>Jika pembayaran secara langsung, tidak perlu diisi.</small>
+                            <select name="receivedbank" id="" class="form-control custom-select">
+                                <option value="BCA - 0222678950 a/n Renaldy Albertdin B Siregar">BCA - 0222678950 a/n
+                                    Renaldy Albertdin B Siregar</option>
+                                <option value="Mandiri - 1060013295970 a/n Agnes Magdalena Sirait">Mandiri -
+                                    1060-0132-9597-0 a/n Agnes Magdalena Sirait</option>
+                                <option value="Pembayaran Langsung (Cash)">Pembayaran Langsung (Cash)</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
